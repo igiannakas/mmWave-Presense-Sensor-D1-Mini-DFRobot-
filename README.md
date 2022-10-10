@@ -32,3 +32,8 @@ Sensor Pin -> D1 Mini Pin
 4. IO2 -> D0 (using the wire)
 5. G -> G
 6. V -> 5V
+
+For the D1, D2, G and 5V pins we will use header and pin connectors soldered on the D1 mini and the mmWave sensor. The D0 - IO2 connection happens via a wire which is soldered on the D0 pad of the D1 mini and the IO2 pad of the sensor.
+
+Pictures below
+
