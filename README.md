@@ -61,5 +61,7 @@ As you can see this is a super compact sensor, barely bigger than the D1 mini it
 **device_name_pretty**: This is the name of the occupancy binary sensor that will be exposed to home assistant. It can be upper and lower case and can contain spaces. For example: Room Name Occupancy Sensor<br>
 **ssid**: type your 2.4ghz wifi SSID<br>
 **wifi_password**: type in your wifi password
-
+5. Do not modify the uart_tx_pin, uart_rx_pin, gpio_pin values unless you're using a different pinout connection.
 4. Deploy the code. I have installed esphome on my mac so I use the following command to deploy the code: esphome run sensor.yaml
+
+
