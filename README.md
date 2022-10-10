@@ -62,8 +62,8 @@ As you can see this is a super compact sensor, barely bigger than the D1 mini it
 **ssid**: type your 2.4ghz wifi SSID<br>
 **wifi_password**: type in your wifi password<br>
 
-5. Do not modify the uart_tx_pin, uart_rx_pin, gpio_pin values unless you're using a different pinout connection.
-4. Deploy the code. I have installed esphome on my mac so I use the following command to deploy the code: esphome run sensor.yaml . If it is a fresh D1 Mini, it doesnt contain the esphome code. For the first flash, you'll need to plug it in to your computer or HA box and flash it. Any subsequent updates will happen over the air. 
+4. Do not modify the uart_tx_pin, uart_rx_pin, gpio_pin values unless you're using a different pinout connection.
+5. Deploy the code. I have installed esphome on my mac so I use the following command to deploy the code: esphome run sensor.yaml . If it is a fresh D1 Mini, it doesnt contain the esphome code. For the first flash, you'll need to plug it in to your computer or HA box and flash it. Any subsequent updates will happen over the air. 
 
 For a tutorial on how to setup your esphome instance read up here:
 1. From the command line & using docker: https://esphome.io/guides/getting_started_command_line.html
