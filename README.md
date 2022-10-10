@@ -5,7 +5,7 @@ The custom module in the code above is used to implement a room presense sensor 
 
 This is based on the excellent work done by CRlogic in the HA forums and documented here: https://github.com/hjmcnew/esphome-hs2xx3a-custom-component/tree/release
 
-In this fork the code is adapted to:
+In this fork of the code, the code is adapted to:
 1. Deliver a very compact build as the DFRobot sensor is stacked on top of the D1 Mini
 2. Trimmed down the code by CRLogic to improve stability for the low power D1 Mini
 3. Prettify the exposed sensor names to Home Assistant to reflect the name of the room the sensor is in
