@@ -58,7 +58,7 @@ As you can see this is a super compact sensor, barely bigger than the D1 mini it
 3. Open the sensor.yaml file and modify the following variables to match your setup:
 
 **device_name**: the sensor's device name. This must be in lower case and any words separated with hyphens (-). For example: living-room-occupancy-sensor<br>
-**device_name_pretty**: This is the name of the occupancy binary sensor that will be exposed to home assistant. It can be upper and lower case and can contain spaces. For example: Room Name Occupancy Sensor<br><br>
+**device_name_pretty**: This is the name of the occupancy binary sensor that will be exposed to home assistant. It can be upper and lower case and can contain spaces. For example: Room Name Occupancy Sensor<br>
 **ssid**: type your 2.4ghz wifi SSID<br>
 **wifi_password**: type in your wifi password<br>
 
