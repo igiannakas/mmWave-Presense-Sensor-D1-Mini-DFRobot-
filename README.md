@@ -9,7 +9,7 @@ In this fork the code is adapted to:
 1. Deliver a very compact build as the DFRobot sensor is stacked on top of the D1 Mini
 2. Trimmed down the code by CRLogic to improve stability for the low power D1 Mini
 3. Prettify the exposed sensor names to Home Assistant to reflect the name of the room the sensor is in
-4. Contain the full sensor YML configuration to simplify the setup process
+4. Contain the full sensor yaml configuration to simplify the setup process
 
 
 # Bill of Materials:
@@ -53,3 +53,13 @@ As you can see this is a super compact sensor, barely bigger than the D1 mini it
 
 # Installing ESPHome and the mmWave code
 
+1. Setup your esphome environment. For instructions: https://esphome.io
+2. Clone this repository to your build environment. Download the code zip and unpack it in your esphome build directory
+3. Open the sensor.yaml file and modify the following variables to match your setup:
+
+**device_name**: the sensor's device name. This must be in lower case and any words separated with hyphens (-). For example: living-room-occupancy-sensor
+**device_name_pretty**: This is the name of the occupancy binary sensor that will be exposed to home assistant. It can be upper and lower case and can contain spaces. For example: Room Name Occupancy Sensor
+**ssid**: type your 2.4ghz wifi SSID
+**wifi_password**: type in your wifi password
+
+4. Deploy the code. I have installed esphome on my mac so I use the following command to deploy the code: esphome run sensor.yaml
