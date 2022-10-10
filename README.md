@@ -90,6 +90,11 @@ The sensor distance, latency, mmwave_sensor, sensitivity values are read from th
 
 Every time you change a value you need to wait ~15 - 20 seconds for the value to be written to the DFRobot radar sensor memory and for the radar to restart. While the D1 mini is writing the values to the radar's memory you'll see the LED light turn red. Once it starts blinking or is off (depending on your settings) the values are now written in memory and are persistent through reboots. 
 
+# Sensor case
+I've designed a basic case for the sensor which should provide a snug fit to its components. The STL file is included in the respository above. Please note that I dont have a 3d printer and as of 10th October 2022 I am awaiting for my printed samples to arrive, so I have not tested fit and finish.
+
+![Case](project-images/case.jpeg "Case")
+
 # Troubleshooting
 What I have found is that the sensor is very sensitive to motion (which is what you want in order to get room presense). However, that might lead to false positives, when for example, you have a window open and objects move. 
 
