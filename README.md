@@ -77,10 +77,17 @@ Here you can:
 4. **Led**: a toggle switch to turn the sensor LED on or off. On initial setup it defaults to off but the sensor LED is on and blinking. So if you want to turn the sensor LED off, switch it on, wait for 10 seconds then switch it off again. The value should now persist in the sensor's memory
 5. **mmwave_sensor**: This toggle switch turns the motion sensor (radar) on or off. It defaults to on, but is reported as off until the first time presense is detected. Can be usefull if you need to disable motion sensing from an automation or script.
 6. **Sensitivity**: How sensitive the sensor is to movement. The Radar sensor is **very** sensitive to movement in order to deliver meaningfull presense detection but it can be triggered falsely with the movement of curtains, clothes etc. If you want to reduce sensitivity reduce this number. It defaults to 7, which is a good balance but if you are finding that the sensor reporting as clear when the room is occupied increase this to 9.
-7. use_safe_mode: restarts the D1 mini in safe mode
+7. **use_safe_mode**: restarts the D1 mini in safe mode
 8. **Restart**: restarts the sensor
 9. **Factory reset mmWMCU**: resets the radar to its factory default settings. (distance, latency, led, sensitivity)
 
 The sensor distance, latency, mmwave_sensor, sensitivity values are read from the radar's presistent memory. They persist reboots but reporting the values to HomeAssistant is delayed. It will take 5-10 minutes after you reboot the D1 Mini for the values to be reported so be patient until they are populated before making any changes.
 
 Every time you change a value you need to wait ~15 - 20 seconds for the value to be written to the DFRobot radar sensor memory and for the radar to restart. While the D1 mini is writing the values to the radar's memory you'll see the LED light turn red. Once it starts blinking or is off (depending on your settings) the values are now written in memory and are persistent through reboots. 
+
+# Troubleshooting:
+What I have found is that the sensor is very sensitive to motion (which is what you want in order to get room presense). However, that might lead to false positives, when for example, you have a window open and objects move. 
+
+In that situation, your best bet is to experiment with placement, the distance parameter and lastly if everything else fails, the sensitivity parameter. You dont want sensitivity too low, as it wont be able to detect the micro movements that humans do when siting around though!
+
+Also if you are sleeping on the sofa and covered with a blanket the sensor might not detect you - a larger cooldown period (latency) can help here but you're trading off the lights being on for longer when noone is actually present.
