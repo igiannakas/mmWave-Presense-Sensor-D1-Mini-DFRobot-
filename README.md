@@ -24,5 +24,11 @@ To make this DIY room presense sensor you'll need the below components:
 Total Cost: £40
 
 # Wiring instructions:
-
-
+To get the smallest possible size we stack the sensor on top of the D1 Mini using the pins that come with the D1 mini. The wiring diagram below reflects a stacked configuration:
+Sensor Pin -> D1 Mini Pin
+1. TX -> D1
+2. RX -> D2
+3. IO1 -> not connected
+4. IO2 -> D0 (using the wire)
+5. G -> G
+6. V -> 5V
