@@ -14,11 +14,14 @@ In this fork the code is adapted to:
 
 # Bill of Materials:
 To make this DIY room presense sensor you'll need the below components:
-1. D1 Mini
-2. DFRobot SEN0395
-3. Mini USB cable and a USB power supply (I use my old phone chargers)
+1. D1 Mini (~£3)
+2. DFRobot SEN0395 (from Digi Key, Mouser, Arrow.com, Farnell.com, AliExpress) (~£32)
+3. Mini USB cable and a USB power supply (I use my old phone chargers) (~£5)
 4. Soldering iron
 5. 5 cm / 2 inch of wire
+6. Optional: 3d printed case
+
+Total Cost: £40
 
 # Wiring instructions:
 
