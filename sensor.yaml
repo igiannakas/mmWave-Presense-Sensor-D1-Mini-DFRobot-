@@ -1,0 +1,58 @@
+substitutions:
+  # change device name to match your desired name
+  device_name: sensor-name-occupancy-sensor
+  # change sensor name below to the one you want to see in Home Assistant
+  device_name_pretty: Room Name Occupancy Sensor
+  # change the below to be your WiFi SSID
+  ssid: SSID
+  # change the below to be your WiFi password
+  wifi_password: WIFIPASSWORD
+  # UART Pin configured for a D1 Mini stacked setup
+  uart_tx_pin: GPIO4
+  # TX Pin configured for a D1 Mini stacked setup
+  uart_rx_pin: GPIO5
+  # RX Pin configured for a D1 Mini stacked setup
+  gpio_pin: GPIO16
+  # include the header file with the UART parsing logic 
+  header_file: header/leapmmw_sensor.h
+
+# include the yml file with the sensor configuration
+packages:
+  inclusions: !include packages/leapmmw_sensor.yml
+
+esphome:
+  name: $device_name
+
+esp8266:
+  board: d1_mini
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  password: ""
+
+ota:
+  password: ""
+
+# Connect to WiFi & create captive portal and web server
+wifi:
+  ssid: "${ssid}"
+  password: "${wifi_password}"
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "${device_name_pretty}"
+    password: "${wifi_password}"
+    
+captive_portal:
+
+web_server:
+  port: 80
+  version: 2
+  include_internal: true
+
+http_request:
+  useragent: esphome/$device_name
+  timeout: 2s
