@@ -35,7 +35,7 @@ Sensor Pin -> D1 Mini Pin
 
 For the D1, D2, G and 5V pins we will use header and pin connectors soldered on the D1 mini and the mmWave sensor. The D0 - IO2 connection happens via a wire which is soldered on the D0 pad of the D1 mini and the IO2 pad of the sensor.
 
-#Pictures below
+# Assembly images
 
 Solder the header connectors and the single wire to the D1 Mini as below:
 ![D1 Mini connections](project-images/1.jpeg "D1 Mini connections")
@@ -50,3 +50,6 @@ Plug in the sensor to the D1 mini,making sure the V sensor pin is aligned to the
 
 As you can see this is a super compact sensor, barely bigger than the D1 mini itself.
 ![Sensor assembled](project-images/6.jpeg "Sensor assembled")
+
+# Installing ESPHome and the mmWave code
+
