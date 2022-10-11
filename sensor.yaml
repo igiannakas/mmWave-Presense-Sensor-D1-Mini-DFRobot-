@@ -13,8 +13,6 @@ substitutions:
   uart_rx_pin: GPIO5
   # RX Pin configured for a D1 Mini stacked setup
   gpio_pin: GPIO16
-  # include the header file with the UART parsing logic 
-  header_file: header/leapmmw_sensor.h
 
 # include the yml file with the sensor configuration
 packages:
@@ -25,9 +23,6 @@ esphome:
 
 esp8266:
   board: d1_mini
-
-# Enable logging
-logger:
 
 # Enable Home Assistant API
 api:

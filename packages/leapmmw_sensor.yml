@@ -1,11 +1,6 @@
 substitutions:
-  device_name: mmwave
-  ## FIXME: To be removed later. Would cause a breaking change.
-  uart_tx_pin: GPIO19
-  uart_rx_pin: GPIO18
-  ##
-  gpio_pin: GPIO23
-  header_file: leapmmw_sensor.h
+  # include the header file with the UART parsing logic 
+  header_file: header/leapmmw_sensor.h
 
 esphome:
   name: ${device_name}
@@ -16,14 +11,14 @@ logger:
   logs:
     sensor: INFO # reduced logging to minimize web_server target overload..
 
-## FIXME: To be removed later. Would cause a breaking change
 uart:
   id: uart_bus
   tx_pin: ${uart_tx_pin}
   rx_pin: ${uart_rx_pin}
   baud_rate: 115200
 
-##
+
+## sensor definitions
 
 binary_sensor:
   - platform: gpio
@@ -33,6 +28,13 @@ binary_sensor:
     pin:
       number: ${gpio_pin}
       mode: INPUT_PULLDOWN
+    # when motion is detected, the radar sensor is on so publish radar state to HA
+    on_press:
+      then:
+        lambda: !lambda |-
+          if (!id(mmwave_sensor).state) {
+            id(mmwave_sensor).publish_state(true);
+          }
     
 sensor:      
   - platform: custom
@@ -53,11 +55,9 @@ switch:
     optimistic: true
     turn_on_action:
       - uart.write: "setUartOutput 1 0"
-      - delay: 2s
-      - uart.write: "setUartOutput 2 1 1 2"
-      - delay: 2s
+      - delay: 1s
       - uart.write: "saveConfig"
-      - delay: 5s 
+      - delay: 4s 
       - uart.write: "sensorStart"
     turn_off_action:
       - uart.write: "sensorStop"

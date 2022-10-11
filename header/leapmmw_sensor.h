@@ -69,14 +69,8 @@ class leapmmw : public Component, public UARTDevice {
       if(readline(read(), buffer, max_line_length) >= 4) {
         std::string line = buffer;
 
-        if (line.substr(0, 6) == "$JYRPO" && id(mmwave_sensor).state == 0) {
-          publishSwitch("mmwave_sensor", 1);
-        }
-
         // compare last line
         if (line.substr(0, 8) == "Response") {
-          // ESP_LOGD("custom", "Found Response - line is: %s", line.c_str());
-          // ESP_LOGD("custom", "Found Response - lastline is: %s", getline.c_str());
           
           // leapMMW:/>getSensitivity
           if (getline.substr(0, 24) == "leapMMW:/>getSensitivity" || getline.substr(0, 14) == "getSensitivity") {
@@ -130,8 +124,6 @@ class leapmmw : public Component, public UARTDevice {
           }
         }
         if (line.substr(0, 4) == "Done") {
-          // ESP_LOGD("custom", "Found Done - line is: %s", line.c_str());
-          // ESP_LOGD("custom", "Found Done - lastline is: %s", getline.c_str());
           // leapMMW:/>sensorStop
           if (getline.substr(0, 20) == "leapMMW:/>sensorStop") {
             // ESP_LOGD("custom", "sensorStop completed successfully");
