@@ -7,7 +7,7 @@ This is based on the excellent work done by CRlogic in the HA forums and documen
 
 In this fork of the code, the code is adapted to:
 1. Deliver a very compact build as the DFRobot sensor is stacked on top of the D1 Mini
-2. Trimmed down the code by CRLogic to improve stability for the low power D1 Mini
+2. Trimmed down the code by CRLogic to improve stability for the low power D1 Mini. The sensor is purely focused on presense and motion detection, which is the core use case.
 3. Prettify the exposed sensor names to Home Assistant to reflect the name of the room the sensor is in
 4. Contain the full sensor yaml configuration to simplify the setup process
 
