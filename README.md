@@ -95,7 +95,9 @@ I've designed a basic case for the sensor which should provide a snug fit to its
 
 There are two linds in the file - a tight and a loose fitting one. Depending on your 3d Printer tolerance print one of the two lids to allow for friction fit.
 
-![Case](project-images/case.jpeg "Case")
+![Case](project-images/Case-new.jpeg "Case")
+
+![Case](project-images/Case-2.jpeg "Case")
 
 # Troubleshooting
 What I have found is that the sensor is very sensitive to motion (which is what you want in order to get room presense). However, that might lead to false positives, when for example, you have a window open and objects move. 
