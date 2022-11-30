@@ -91,7 +91,9 @@ The sensor distance, latency, mmwave_sensor, sensitivity values are read from th
 Every time you change a value you need to wait ~15 - 20 seconds for the value to be written to the DFRobot radar sensor memory and for the radar to restart. While the D1 mini is writing the values to the radar's memory you'll see the LED light turn red. Once it starts blinking or is off (depending on your settings) the values are now written in memory and are persistent through reboots. 
 
 # Sensor case
-I've designed a basic case for the sensor which should provide a snug fit to its components. The STL file is included in the respository above. Please note that I dont have a 3d printer and as of 10th October 2022 I am awaiting for my printed samples to arrive, so I have not tested fit and finish.
+I've designed a basic case for the sensor which should provide a snug fit to its components. The STL file is included in the respository above. The case has been tested with the D1 mini and the above sensor and also with a D1 mini and an LD2410 mmwave sensor.
+
+There are two linds in the file - a tight and a loose fitting one. Depending on your 3d Printer tolerance print one of the two lids to allow for friction fit.
 
 ![Case](project-images/case.jpeg "Case")
 
