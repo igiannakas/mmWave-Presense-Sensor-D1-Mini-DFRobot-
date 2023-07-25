@@ -14,12 +14,7 @@ class leapmmw : public Component, public UARTDevice {
     auto get_numbers = App.get_numbers();
     for(int i = 0; i < get_numbers.size(); i++) {
       std::string name = get_numbers[i]->get_name();
-      ESP_LOGD("custom", "Publish position %i" , name.find(sensor)    );
-      ESP_LOGD("custom", "Publish Number (sensor) %s" , sensor.c_str());
-      ESP_LOGD("custom", "Publish Number (sensor) %s" , sensor.c_str()   );
-
       if(name.size() > 6 && name.find(sensor) !=std::string::npos) {
-        ESP_LOGD("custom", "WORKED %s" , name);
         get_numbers[i]->publish_state(resp);
       }
     }
