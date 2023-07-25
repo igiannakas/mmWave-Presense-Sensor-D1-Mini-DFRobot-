@@ -7,9 +7,9 @@ esphome:
   includes:
     - ${header_file}
 
-logger:
-  logs:
-    sensor: DEBUG # reduced logging to minimize web_server target overload..
+#logger:
+#  logs:
+#    sensor: DEBUG # reduced logging to minimize web_server target overload..
 
 uart:
   id: uart_bus
