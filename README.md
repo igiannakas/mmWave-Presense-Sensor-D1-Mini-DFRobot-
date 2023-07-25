@@ -3,6 +3,8 @@ This is a step by step guide on how to build an mmWave presence detection using 
 
 The custom module in the code above is used to implement a room presense sensor and exposes the presense detection sensor and the radar's configuration variables to Home Assistant via the ESPHome integration.
 
+For a more advanced multi-sensor, including temperature, humidity, air quality and air pressure refer to my project here: https://github.com/igiannakas/Presense-Temperature-Humidity-Air-Quality-multi-sensor-DFRobot-SHT35-or-BME680-
+
 This is based on the excellent work done by CRlogic in the HA forums and documented here: https://github.com/hjmcnew/esphome-hs2xx3a-custom-component/tree/release
 
 In this fork of the code, the code is adapted to:
@@ -14,14 +16,13 @@ In this fork of the code, the code is adapted to:
 
 # Bill of Materials:
 To make this DIY room presense sensor you'll need the below components:
-1. D1 Mini (~£3)
-2. DFRobot SEN0395 (from Digi Key, Mouser, Arrow.com, Farnell.com, AliExpress) (~£32)
-3. Mini USB cable and a USB power supply (I use my old phone chargers) (~£5)
+1. D1 Mini
+2. DFRobot SEN0395 (from Digi Key, Mouser, Arrow.com, Farnell.com, AliExpress)
+3. Mini USB cable and a USB power supply (I use my old phone chargers)
 4. Soldering iron
 5. 5 cm / 2 inch of wire
-6. Optional: 3d printed case
+6. Optional: 3d printed case (either the one in the folder above or the slightly larger case I've published here if you are using an ESP32 Mini: https://www.printables.com/model/520547-esp32-temperature-and-optional-mmwave-radar-presen)
 
-Total Cost: £40
 
 # Wiring instructions:
 To get the smallest possible size we stack the sensor on top of the D1 Mini using the pins that come with the D1 mini. The wiring diagram below reflects a stacked configuration:
