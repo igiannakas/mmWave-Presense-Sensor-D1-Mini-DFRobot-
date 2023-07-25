@@ -9,7 +9,7 @@ esphome:
 
 logger:
   logs:
-    sensor: INFO # reduced logging to minimize web_server target overload..
+    sensor: DEBUG # reduced logging to minimize web_server target overload..
 
 uart:
   id: uart_bus
@@ -49,7 +49,7 @@ switch:
     name: use_safe_mode
 
   - platform: template
-    name: mmwave_sensor
+    name: "${device_name_pretty} mmwave_sensor"
     id: mmwave_sensor # do not change
     entity_category: config
     optimistic: true
@@ -64,7 +64,7 @@ switch:
       - delay: 2s
 
   - platform: template
-    name: led
+    name: "${device_name_pretty} led"
     id: led  # do not change
     entity_category: config
     optimistic: true
@@ -89,7 +89,7 @@ switch:
 
 number:
   - platform: template
-    name: distance
+    name: "${device_name_pretty} distance"
     id: distance # do not change
     entity_category: config
     min_value: 0.15
@@ -110,7 +110,7 @@ number:
       - switch.turn_on: mmwave_sensor 
       
   - platform: template
-    name: latency
+    name: "${device_name_pretty} latency"
     id: latency # do not change
     entity_category: config
     min_value: 1
@@ -131,7 +131,7 @@ number:
       - switch.turn_on: mmwave_sensor
 
   - platform: template
-    name: sensitivity
+    name: "${device_name_pretty} sensitivity"
     id: sensitivity # do not change
     entity_category: config
     min_value: 0
