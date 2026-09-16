@@ -1,6 +1,6 @@
 # Introduction
 
-**ANNOUNCEMENT: DF Robot code has been superseded by a dedicated module here: https://github.com/igiannakas/esphome-dfrobot-mmwave It is functional with the latest ESPHome releases that mandate use of external components plus it supports the C4001 family of sensors.**
+**ANNOUNCEMENT: The DF robot code has been superseded by a dedicated module here: https://github.com/igiannakas/esphome-dfrobot-mmwave It is functional with the latest ESPHome releases that mandate use of external components plus it supports the C4001 family of sensors.**
 
 This is a step by step guide on how to build an mmWave presence detection using DFRobot SEN0395, D1 Mini ESP-8266 and ESPHome. 
 
